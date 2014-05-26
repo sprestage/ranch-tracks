@@ -10,6 +10,10 @@ script:
 - bundle exec rake db:test:prepare
 - bundle exec rake
 bundler_args: "--binstubs=./bundler_stubs"
+before_install:
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+  - "cp config/site.yml.tmpl config/site.yml"
 deploy:
   provider: heroku
   api_key:
@@ -17,3 +21,5 @@ deploy:
   app: ranch-tracks
   on:
     repo: sprestage/ranch-tracks
+
+

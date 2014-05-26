@@ -49,6 +49,12 @@ group :development do
   gem "rack-mini-profiler"
 end
 
+group :development do
+# Figaro for removing secret keys from github
+  gem 'figaro'
+end
+
+
 group :test do
   gem "factory_girl_rails"
   gem "capybara"
