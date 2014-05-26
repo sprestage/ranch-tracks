@@ -9,4 +9,8 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-Tracksapp::Application.config.secret_key_base = SITE_CONFIG["secret_token"] || SecureRandom.hex(64)
+Tracksapp::Application.config.secret_key_base = if Rails.env.development? || Rails.env.test?
+    ('x' * 30) # meets minimum requirement of 30 chars long
+  else
+    ENV['SECRET_TOKEN']
+  end
