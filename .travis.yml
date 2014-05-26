@@ -8,7 +8,6 @@ before_script:
 script:
 - RAILS_ENV=test bundle exec rake db:migrate --trace
 - bundle exec rake db:test:prepare
-- bundle exec rake
 bundler_args: "--binstubs=./bundler_stubs"
 before_install:
   - "export DISPLAY=:99.0"
