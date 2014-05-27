@@ -19,7 +19,6 @@
 /tmp
 config/application.yml
 config/deploy.rb
-config/site.yml
 db/data.yml
 nbproject
 rerun.txt
