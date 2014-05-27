@@ -28,6 +28,7 @@ secure_cookies: false
 #
 #   SecureRandom.hex(64)
 #
+secret_token: "5299518ee7c25126811e9f1ed4abef1552ee65335cc84ff817f0a8abaf12389b50abc8efba980deaf19a67d15e9974ca2c4bb018c63aae03d028837dee639384"
 
 
 # Uncomment if you want to dispatch todos that come from email based on the To:
