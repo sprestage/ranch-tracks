@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+# Specify ruby version for Heroku deploy
+ruby '2.0.0'
 
 gem 'rails', '~>4.1.0'
 gem 'sass-rails', '~>4.0'
@@ -40,6 +42,10 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 1.2'
 
+group :production do
+  gem 'rails_12factor'
+end
+
 group :development do
   # gem "spring"
   # gem "spring-commands-cucumber"
@@ -49,7 +55,7 @@ group :development do
   gem "rack-mini-profiler"
 end
 
-group :development do
+group :development, :test do
 # Figaro for removing secret keys from github
   gem 'figaro'
 end
