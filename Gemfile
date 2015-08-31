@@ -2,25 +2,19 @@ source 'https://rubygems.org'
 # Specify ruby version for Heroku deploy
 ruby '2.0.0'
 
-gem 'rails', '~>4.1.0'
-gem 'sass-rails', '~>4.0'
-gem 'coffee-rails', '~>4.0'
-
-#gem 'json'
+gem 'rails', '4.1.13'
+gem 'sass-rails'
+gem 'coffee-rails'
 
 # todo: remove xml api
-gem 'actionpack-xml_parser', '>=1.0.1'
+gem 'actionpack-xml_parser'
 
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer'
 
-gem 'uglifier', '>=1.3.0'
+gem 'uglifier'
 
 gem 'jquery-rails'
 
-# you may comment out the database driver you will not be using.
-# This will prevent a native build of the driver. Building native drivers is not
-# always possible on all hosters
 gem "pg"
 
 gem "RedCloth"
@@ -31,16 +25,9 @@ gem "aasm"
 gem "htmlentities"
 gem "swf_fu"
 gem "rails_autolink"
-gem "cache_digests"
 
 # To use ActiveModel has_secure_password
-gem 'bcrypt-ruby', '~> 3.0.0'
-
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-# gem 'turbolinks'
-
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-# gem 'jbuilder', '~> 1.2'
+gem 'bcrypt-ruby'
 
 group :production do
   gem 'rails_12factor'
@@ -50,7 +37,7 @@ group :development do
   # gem "spring"
   # gem "spring-commands-cucumber"
   gem "yard"
-  gem 'tolk', '>=1.5.0'
+  gem 'tolk'
   gem "bullet"
   gem "rack-mini-profiler"
 end
@@ -69,7 +56,7 @@ group :test do
   gem "database_cleaner"
   gem "mocha", :require => false
 
-  gem "aruba", ">=0.5.4", :require => false
+  gem "aruba", :require => false
 
   # Note that > 2.14 has problems, see:
   # https://code.google.com/p/selenium/issues/detail?id=3075
