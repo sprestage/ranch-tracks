@@ -8,7 +8,7 @@ Tracksapp::Application.configure do
   config.cache_classes = true
 
   # Configure static asset server for tests with Cache-Control for performance
-  config.serve_static_assets = true
+  config.serve_static_files = true
   config.static_cache_control = "public, max-age=3600"
 
   # Log error messages when you accidentally call methods on nil
@@ -34,11 +34,11 @@ Tracksapp::Application.configure do
 
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
-  
+
   # Unique cookies and use cookies for session
   # config.action_controller.session_store :cookie_store, :key => 'TracksCucumber'
 
   SITE_CONFIG['salt'] ||= 'change-me'
-  
+
   config.time_zone = 'UTC'
 end

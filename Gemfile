@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 # Specify ruby version for Heroku deploy
-ruby '2.0.0'
+ruby '2.1.4'
 
-gem 'rails', '4.1.13'
+gem 'rails', '4.2.4'
 gem 'sass-rails'
 gem 'coffee-rails'
 
@@ -18,7 +18,6 @@ gem 'jquery-rails'
 gem "pg"
 
 gem "RedCloth"
-gem "sanitize"
 gem "will_paginate"
 gem "acts_as_list"
 gem "aasm"

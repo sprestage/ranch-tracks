@@ -24,12 +24,12 @@ class TodoXmlApiTest < ActionDispatch::IntegrationTest
   def test_get_tickler_returns_all_deferred_and_pending_todos
     number = @user.todos.deferred.count + @user.todos.pending.count
     authenticated_get_xml "/tickler.xml", @user.login, @password, {}
-    assert_tag :tag => "todos", :children => { :count => number }
+    assert_select :tag => "todos", :children => { :count => number }
   end
 
   def test_get_tickler_omits_user_id
     authenticated_get_xml "/tickler.xml", @user.login, @password, {}
-    assert_no_tag :tag => "user_id"
+    assert_select :tag => "user_id"
   end
 
   def test_get_index_with_only_active_todos
@@ -113,7 +113,7 @@ class TodoXmlApiTest < ActionDispatch::IntegrationTest
     assert_equal "starred, starred1, starred2", todo.tag_list
     assert todo.starred?
   end
-  
+
   def test_post_create_todo_with_single_tag
     authenticated_post_xml_to_todo_create "
 <todo>
@@ -166,7 +166,7 @@ class TodoXmlApiTest < ActionDispatch::IntegrationTest
     assert_not_nil todo
     assert_equal "bar, bingo, foo", todo.tag_list
   end
-  
+
   def test_post_create_todo_with_new_context
     authenticated_post_xml_to_todo_create "
 <todo>

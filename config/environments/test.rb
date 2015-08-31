@@ -13,7 +13,7 @@ Tracksapp::Application.configure do
   config.eager_load = false
 
   # Configure static asset server for tests with Cache-Control for performance.
-  config.serve_static_assets  = true
+  config.serve_static_files  = true
   config.static_cache_control = "public, max-age=3600"
 
   # Show full error reports and disable caching.
@@ -33,12 +33,14 @@ Tracksapp::Application.configure do
 
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
-  
+
   # Unique cookies and use cookies for session
   # config.action_controller.session_store = :cookie_store
   # config.action_controller.session = { :key => 'TracksTest', :secret => SITE_CONFIG['salt'] * (30.0 /  SITE_CONFIG['salt'].length).ceil }
 
   SITE_CONFIG['salt'] ||= 'change-me'
-  
+
   config.time_zone = 'UTC'
+
+  config.active_support.test_order = :random
 end
