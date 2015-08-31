@@ -1,5 +1,25 @@
-# My copy of Tracks from github.com/TracksApp/tracks
+[![Dependency Status](https://gemnasium.com/sprestage/ranch-tracks.svg)](https://gemnasium.com/sprestage/ranch-tracks)
+
+Susan's copy of Tracks
+=======
+
+Source copied from github.com/TracksApp/tracks
 All original content of the Tracks readme can be found below so you too can use and contribute to this awesome application.
+
+
+Version
+=======
+
+Currently running rails 4.2.4.  Original ran rails 4.1.1.
+
+
+Current Issues
+=======
+
+There may still be sanitizer issues from the upgrade from 4.1 to 4.2.
+Tests run successfully, but about 10% are throwing errors that need to be resolved.
+
+
 
 ---
 #
